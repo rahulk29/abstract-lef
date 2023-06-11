@@ -1,0 +1,17 @@
+[package]
+name = "abstract_lef"
+version = "0.0.2"
+edition = "2021"
+authors = ["Rahul Kumar <rahulkumar@berkeley.edu>", "Rohan Kumar <rohankumar@berkeley.edu>"]
+description = "A public wrapper around the Abstract API"
+repository = "https://github.com/rahulk29/abstract_lef"
+license = "BSD-3-Clause"
+
+[dependencies]
+inner = { package = "abstract_lef", git = "ssh://git@bwrcrepo.eecs.berkeley.edu/rahulkumar/abstract_lef.git", branch = "master", optional = true }
+
+
+[features]
+commercial = ["dep:inner"]
+
+default = []
